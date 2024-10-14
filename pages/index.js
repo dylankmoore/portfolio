@@ -1,27 +1,20 @@
-import { Button } from 'react-bootstrap';
-import { signOut } from '../utils/auth';
-import { useAuth } from '../utils/context/authContext';
+import React from 'react';
+import ProjectsSection from './projects';
 
-function Home() {
-  const { user } = useAuth();
+const Home = () => (
+  <>
+    <section className="hero-section" style={{ height: '90vh', padding: '80px' }}>
+      <div
+        className="text-center d-flex flex-column justify-content-center align-content-center"
+        style={{ maxWidth: '475px', margin: '0 auto' }}
+      >
+        <h1>Hello!</h1> I am a Full Stack Web Developer based in Nashville, Tennessee. I’m currently freelancing and always looking for new projects. If you have a fun idea, please get in touch!
+      </div>
+    </section>
 
-  return (
-    <div
-      className="text-center d-flex flex-column justify-content-center align-content-center"
-      style={{
-        height: '90vh',
-        padding: '30px',
-        maxWidth: '400px',
-        margin: '0 auto',
-      }}
-    >
-      <h1>Hello there {user.displayName}!!!! </h1>
-      <p>Click the button below to logout!</p>
-      <Button variant="danger" type="button" size="lg" className="copy-btn" onClick={signOut}>
-        Sign Out
-      </Button>
-    </div>
-  );
-}
+    {/* Additional Sections */}
+    <ProjectsSection />
+  </>
+);
 
 export default Home;

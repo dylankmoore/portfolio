@@ -1,16 +1,17 @@
-@import 'bootstrap/dist/css/bootstrap.css';
+/* @import 'bootstrap/dist/css/bootstrap.css'; */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Inconsolata', monospace;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  color: #4A90E2;
 }
 
 * {
@@ -18,5 +19,69 @@ a {
 }
 
 body {
-  background-color: #88effd;
+  background-color: #f4f5f8;
+  color: #333;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+.navbar-brand {
+  font-family: 'Playfair Display', serif;
+}
+
+.btn-primary {
+  background-color: #87CEEB; 
+  border-color: #87CEEB;
+}
+
+.btn-primary:hover {
+  background-color: #FFB6C1; /* Soft pink on hover */
+  border-color: #FFB6C1;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn ease 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.slide-in-left {
+  transform: translateX(-100%);
+  animation: slideInLeft ease 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-family: 'Inconsolata', monospace;
+  font-size: 1rem;
 }
