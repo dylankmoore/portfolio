@@ -1,29 +1,43 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
-import {
-  Navbar, Container, Nav, Button,
-} from 'react-bootstrap';
-import { signOut } from '../utils/auth';
 
-export default function NavBar() {
+const NavBar = () => {
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const controlNavbar = useCallback(() => {
+    if (window.scrollY < lastScrollY || window.scrollY < 50) {
+      setShowNavbar(true); // show when scrolling up
+    } else {
+      setShowNavbar(false); // hide when scrolling down
+    }
+    setLastScrollY(window.scrollY);
+  }, [lastScrollY]);
+
+  useEffect(() => {
+    window.addEventListener('scroll', controlNavbar);
+    return () => {
+      window.removeEventListener('scroll', controlNavbar);
+    };
+  }, [controlNavbar]);
+
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <Container>
-        <Link passHref href="/">
-          <Navbar.Brand>CHANGE ME</Navbar.Brand>
-        </Link>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            {/* CLOSE NAVBAR ON LINK SELECTION: https://stackoverflow.com/questions/72813635/collapse-on-select-react-bootstrap-navbar-with-nextjs-not-working */}
-            <Link passHref href="/">
-              <Nav.Link>Home</Nav.Link>
-            </Link>
-            <Button variant="danger" onClick={signOut}>Sign Out</Button>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <nav className={`navbar ${showNavbar ? 'visible' : 'hidden'}`}>
+      <Link href="/" passHref>
+        <a className="nav-link">Home</a>
+      </Link>
+      <Link href="/about" passHref>
+        <a className="nav-link">About</a>
+      </Link>
+      <Link href="/projects" passHref>
+        <a className="nav-link">Projects</a>
+      </Link>
+      <Link href="/contact" passHref>
+        <a className="nav-link">Contact</a>
+      </Link>
+    </nav>
   );
-}
+};
+
+export default NavBar;
