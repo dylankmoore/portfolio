@@ -1,18 +1,45 @@
 import React from 'react';
+import Image from 'next/image';
 import ProjectsSection from './projects';
+import About from './about';
 
 const Home = () => (
   <>
-    <section className="hero-section" style={{ height: '90vh', padding: '80px' }}>
+    {/* Hero / Intro */}
+    <section className="hero-section" style={{ padding: '80px 0' }}>
       <div
         className="text-center d-flex flex-column justify-content-center align-content-center"
         style={{ maxWidth: '475px', margin: '0 auto' }}
       >
-        <h1>Hello!</h1> I am a Full Stack Web Developer based in Nashville, Tennessee. I’m currently freelancing and always looking for new projects. If you have a fun idea, please get in touch!
+        <br />
+        <div style={{ transform: 'translateX(15px)' }} className="hello-animate">
+          <Image
+            src="/hello (1).png"
+            alt="Hello"
+            width={340}
+            height={150}
+            priority
+          />
+        </div>
+        <br />
+        <p>I’m Dylan Moore — a Full Stack Web Developer based in Nashville, Tennessee.</p>
       </div>
     </section>
 
-    {/* Additional Sections */}
+    <div className="section-divider">
+      <Image
+        src="/line.png"
+        alt="Section Break"
+        width={600}
+        height={40}
+        priority
+      />
+    </div>
+
+    {/* About Section */}
+    <About />
+
+    {/* Projects Section */}
     <ProjectsSection />
   </>
 );
