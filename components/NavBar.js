@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useEffect, useCallback } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 const NavBar = () => {
@@ -24,6 +25,19 @@ const NavBar = () => {
 
   return (
     <nav className={`navbar ${showNavbar ? 'visible' : 'hidden'}`}>
+      <div className="navbar-logo">
+        <Link href="/" passHref>
+          <a>
+            <Image
+              src="/dylan moore.png"
+              alt="Dylan Moore Logo"
+              width={150}
+              height={45}
+              priority
+            />
+          </a>
+        </Link>
+      </div>
       <Link href="/" passHref>
         <a className="nav-link">Home</a>
       </Link>
