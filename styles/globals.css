@@ -225,5 +225,7 @@ h1, h2, h3 {
 }
 
 .about-section {
+  margin-top: 40px !important;
+  padding: 50px 0 10px 0; /* Reduce bottom padding */
   margin-bottom: -40px !important; /* Force no extra space */
 }
