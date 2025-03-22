@@ -74,7 +74,16 @@ const ProjectsSection = () => (
           '/y2.png',
         ]}
       />
-    </div>
+    </div><br /><br />
+    <div className="section-divider">
+      <Image
+        src="/line.png"
+        alt="Section Break"
+        width={600}
+        height={40}
+        priority
+      />
+    </div><br /><br />
   </div>
 );
 

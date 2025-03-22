@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import ProjectsSection from './projects';
+import ContactSection from '../components/ContactCard';
 import About from './about';
 
 const Home = () => (
@@ -41,6 +42,9 @@ const Home = () => (
 
     {/* Projects Section */}
     <ProjectsSection />
+
+    {/* Contact Section */}
+    <ContactSection />
   </>
 );
 
