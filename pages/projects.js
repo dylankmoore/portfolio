@@ -31,7 +31,7 @@ const Projects = () => {
         <br /><br /><br /><br /><br />
         <div style={{ width: 'fit-content', margin: '0 auto' }}>
           <Image
-            src="/projects (1).png"
+            src="/projects.png"
             alt="My Projects"
             width={250}
             height={80}

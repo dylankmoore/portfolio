@@ -44,7 +44,7 @@ const AboutCard = () => {
             >
               <br />
               <Image
-                src="/aboutme (1).png"
+                src="/aboutme.png"
                 alt="Contact Header"
                 width={220}
                 height={70}
