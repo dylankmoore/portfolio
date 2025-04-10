@@ -1,7 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect, useRef } from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
-import Image from 'next/image';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -43,12 +44,11 @@ const ContactSection = () => {
           marginBottom: '30px',
         }}
       >
-        <Image
+        <img
           src="/contact.png"
           alt="Contact Header"
           width={200}
           height={55}
-          priority
         />
       </div><br />
 
