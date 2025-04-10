@@ -38,7 +38,7 @@ const NavBar = () => {
         padding: '20px',
         position: 'fixed',
         width: '100%',
-        backgroundColor: 'white',
+        backgroundColor: 'transparent',
         top: showNavbar ? '0' : '-100px',
         transition: 'top 0.3s',
         zIndex: 100,
@@ -52,16 +52,16 @@ const NavBar = () => {
         }}
       >
         <Link href="/" passHref>
-          <a style={navLinkStyle}>Home</a>
+          <a className={navLinkStyle}>Home</a>
         </Link>
         <Link href="/about" passHref>
-          <a style={navLinkStyle}>About</a>
+          <a className={navLinkStyle}>About</a>
         </Link>
         <Link href="/projects" passHref>
-          <a style={navLinkStyle}>Projects</a>
+          <a className={navLinkStyle}>Projects</a>
         </Link>
         <Link href="/contact" passHref>
-          <a style={navLinkStyle}>Contact</a>
+          <a className={navLinkStyle}>Contact</a>
         </Link>
       </div>
     </nav>

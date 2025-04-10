@@ -136,7 +136,8 @@ const Projects = () => {
                         <li>Google authorization</li>
                         <li>CRUD on the logs</li>
                         <li>Search on the logs</li>
-                        <li>Filtering logs through their pain levels</li>
+                        <li>Filtering logs via pain levels</li>
+                        <li>Built with React/Next.js & Firebase</li>
                       </ul>
                       <br />
                       <a href="https://github.com/dylankmoore/migraine-manager" target="_blank" rel="noopener noreferrer">
