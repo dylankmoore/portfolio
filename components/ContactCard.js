@@ -1,9 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect, useRef } from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { motion, AnimatePresence } from 'framer-motion';
 
 const ContactSection = () => {
@@ -34,33 +32,28 @@ const ContactSection = () => {
         padding: '40px 20px',
         position: 'relative',
         zIndex: 2,
+        textAlign: 'center',
       }}
     >
-      {/* Contact header is always visible */}
-      <div
-        style={{
-          width: 'fit-content',
-          margin: '0 auto',
-          marginBottom: '30px',
-        }}
-      >
-        <img
-          src="/contact.png"
-          alt="Contact Header"
-          width={200}
-          height={55}
-        />
-      </div><br />
-
       <AnimatePresence>
         {showContent && (
           <motion.div
-            key="contact-content"
+            key="contact-section"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
+            {/* Header */}
+            <div style={{ marginBottom: '30px' }}>
+              <img
+                src="/contact.png"
+                alt="Contact Header"
+                width={200}
+                height={55}
+              />
+            </div>
+
             {/* Social Links */}
             <div className="social-links">
               <a
@@ -88,7 +81,11 @@ const ContactSection = () => {
               action="https://formspree.io/f/xnnppwnj"
               method="POST"
               className="contact-form"
-              style={{ paddingLeft: '40px' }}
+              style={{
+                maxWidth: '600px',
+                margin: '0 auto',
+                textAlign: 'left',
+              }}
             >
               <label htmlFor="name">Name</label>
               <input type="text" id="name" name="name" required />
@@ -99,7 +96,7 @@ const ContactSection = () => {
               <label htmlFor="message">Message</label>
               <textarea id="message" name="message" rows="5" required />
 
-              <button id="submit" type="submit">Send Message</button>
+              <button id="submit-btn" type="submit">Send Message</button>
             </form>
           </motion.div>
         )}
