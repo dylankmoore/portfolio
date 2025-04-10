@@ -13,7 +13,6 @@ const ContactSection = () => {
     const handleScroll = () => {
       if (!sectionRef.current) return;
       const rect = sectionRef.current.getBoundingClientRect();
-      // Show the content when top of contact section is within 80% of the viewport
       if (rect.top < window.innerHeight * 0.8) {
         setShowContent(true);
       } else {
@@ -22,7 +21,7 @@ const ContactSection = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // check on mount
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -45,7 +44,7 @@ const ContactSection = () => {
         }}
       >
         <Image
-          src="/contact (1).png"
+          src="/contact.png"
           alt="Contact Header"
           width={200}
           height={55}
