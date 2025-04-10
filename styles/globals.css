@@ -43,7 +43,12 @@ a {
 }
 
 a:hover {
-  color: rgb(165, 178, 252);
+  background: linear-gradient(to right, #8e5e9f, #3a9cd3); /* darker gradient */
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: white;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.4s ease;
 }
 
 * {
@@ -57,20 +62,6 @@ body {
 
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
-}
-
-.navbar-brand {
-  font-family: 'Playfair Display', serif;
-}
-
-.btn-primary {
-  background-color: #87CEEB; 
-  border-color: #87CEEB;
-}
-
-.btn-primary:hover {
-  background-color: #FFB6C1;
-  border-color: #FFB6C1;
 }
 
 .fade-in {
@@ -111,13 +102,9 @@ h1, h2, h3 {
   z-index: 1000;
 }
 
-.navbar a {
-  text-decoration: none;
-  color: #333;
-  font-family: 'Inconsolata', monospace;
-  font-size: 1rem;
+.navbar a:hover {
+color: white;
 }
-
 
 .project-card {
   max-width: 900px;
@@ -253,7 +240,12 @@ h1, h2, h3 {
 .view-work-btn:hover {
   background-color: transparent;
   border: 2px solid white;
-  color: black !important;
+  background: linear-gradient(to right, #8e5e9f, #3a9cd3); /* darker gradient */
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: white;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.4s ease;
 }
 
 .contact-form button {
@@ -269,9 +261,13 @@ h1, h2, h3 {
 }
 
 .contact-form button:hover {
-  background-color: transparent;
+  background: linear-gradient(90deg, #521475, #925eb1, #5797bc, #d6f0ff, #e9f7ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
   border: 2px solid white;
-  color: black;
+  transition: all 0.4s ease;
 }
 
 footer {

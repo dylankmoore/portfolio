@@ -27,29 +27,29 @@ const Projects = () => {
 
   return (
     <>
-      <div ref={sectionRef}>
-        <br /><br /><br /><br /><br />
-        <div style={{ width: 'fit-content', margin: '0 auto' }}>
-          <img
-            src="/projects.png"
-            alt="My Projects"
-            width={250}
-            height={80}
-          />
-        </div>
-        <br />
-
+      <section ref={sectionRef} style={{ padding: '40px 20px' }}>
         <AnimatePresence>
           {showProjects && (
-            <>
-              {/* Architecture Archive */}
-              <motion.div
-                style={{ marginBottom: '100px' }}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false, amount: 0.3 }}
-                transition={{ duration: 0.7, ease: 'easeOut' }}
-              >
+            <motion.div
+              key="projects-content"
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+            >
+              {/* Animated Header */}
+              <br /><br /><br />
+              <div style={{ width: 'fit-content', margin: '0 auto', marginBottom: '40px' }}>
+                <img
+                  src="/projects.png"
+                  alt="My Projects"
+                  width={250}
+                  height={80}
+                />
+              </div>
+
+              {/* Each project */}
+              <div style={{ marginBottom: '100px' }}>
                 <ProjectCard
                   title="Architecture Archive"
                   description={(
@@ -78,16 +78,9 @@ const Projects = () => {
                   )}
                   imageSrcs={['/archive1.png', '/archive5.png']}
                 />
-              </motion.div>
+              </div>
 
-              {/* Y2Play */}
-              <motion.div
-                style={{ marginBottom: '100px' }}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false, amount: 0.3 }}
-                transition={{ duration: 0.7, ease: 'easeOut', delay: 0.1 }}
-              >
+              <div style={{ marginBottom: '100px' }}>
                 <ProjectCard
                   title="Y2Play"
                   description={(
@@ -105,23 +98,19 @@ const Projects = () => {
                         <li>React/Next.js Frontend</li>
                       </ul>
                       <br />
-                      <a href="https://github.com/dylankmoore/Y2PlayFE" target="_blank" rel="noopener noreferrer">
+                      <a href="https://github.com/dylankmoore/BE-MusicStreaming" target="_blank" rel="noopener noreferrer">
                         View Repository
+                      </a>&nbsp;&nbsp;&nbsp;
+                      <a href="https://www.loom.com/share/64520fe4da35437eb44179c626836b8a?sid=5c9eebe1-ce83-4d8c-94ca-c9283f5d9eb9" target="_blank" rel="noopener noreferrer">
+                        View Demo
                       </a>
                     </>
                   )}
                   imageSrcs={['/y1.png', '/y2.png']}
                 />
-              </motion.div>
+              </div>
 
-              {/* Migraine Manager */}
-              <motion.div
-                style={{ marginBottom: '100px' }}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false, amount: 0.3 }}
-                transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
-              >
+              <div style={{ marginBottom: '100px' }}>
                 <ProjectCard
                   title="Migraine Manager"
                   description={(
@@ -144,16 +133,20 @@ const Projects = () => {
                       </a>&nbsp;&nbsp;&nbsp;
                       <a href="https://migraine-manager.netlify.app/" target="_blank" rel="noopener noreferrer">
                         Visit deployed site
+                      </a><br />
+                      &nbsp;&nbsp;&nbsp;
+                      <a href="https://www.loom.com/share/36c257843ea34b49927d0b0a1308c2b1?sid=ff568340-834a-496f-ab11-6f8568298092" target="_blank" rel="noopener noreferrer">
+                        View demo
                       </a>
                     </>
                   )}
                   imageSrcs={['/mm2.png', '/mm4.png']}
                 />
-              </motion.div>
-            </>
+              </div>
+            </motion.div>
           )}
         </AnimatePresence>
-      </div>
+      </section>
 
       <Footer />
     </>

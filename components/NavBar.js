@@ -2,13 +2,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 
-const navLinkStyle = {
-  textDecoration: 'none',
-  color: 'black',
-  fontWeight: 500,
-  fontSize: '16px',
-};
-
 const NavBar = () => {
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -45,10 +38,10 @@ const NavBar = () => {
       }}
     >
       <div style={{ display: 'flex', gap: '16px' }}>
-        <Link href="/" style={navLinkStyle}>Home</Link>
-        <Link href="/about" style={navLinkStyle}>About</Link>
-        <Link href="/projects" style={navLinkStyle}>Projects</Link>
-        <Link href="/contact" style={navLinkStyle}>Contact</Link>
+        <Link href="/" className="nav-link">Home</Link>
+        <Link href="/about" className="nav-link">About</Link>
+        <Link href="/projects" className="nav-link">Projects</Link>
+        <Link href="/contact" className="nav-link">Contact</Link>
       </div>
     </nav>
   );

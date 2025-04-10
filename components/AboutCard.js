@@ -5,6 +5,20 @@ import React from 'react';
 import { useInView } from 'react-intersection-observer';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { motion, AnimatePresence } from 'framer-motion';
+import {
+  SiCsharp,
+  SiDotnet,
+  SiReact,
+  SiNextdotjs,
+  SiJavascript,
+  SiHtml5,
+  SiCss3,
+  SiPostgresql,
+  SiDbeaver,
+  SiPostman,
+  SiVisualstudiocode,
+  SiVisualstudio,
+} from 'react-icons/si';
 
 const AboutCard = () => {
   const { ref, inView } = useInView({
@@ -56,7 +70,7 @@ const AboutCard = () => {
               </p>
 
               <p>
-                I recently graduated with a certificate in Full Stack Web Development, where I gained hands-on experience building responsive, user-friendly applications using technologies like C#, .NET, React, and Next.js. Since then, I've been freelancing and continuing to sharpen my skills through personal projects.
+                I recently graduated with a certificate in Full Stack Web Development, where I gained hands on experience building responsive, user-friendly applications using technologies like C#, .NET, SQL, React, and Next.js. Since then, I've been continuing to sharpen my skills through personal projects.
               </p>
 
               <p>

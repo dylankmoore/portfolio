@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Footer from '../components/FooterCard';
@@ -15,7 +16,12 @@ const Home = () => {
         <title>Your Name</title>
       </Head>
       <div className="home-wrapper">
-        <h1 className="main-name">DYLAN MOORE</h1>
+        <img
+          src="/dkm.png"
+          alt="Dylan Moore Logo"
+          width={300}
+          height={100}
+        />
         <p className="subtitle">Fullstack Software Developer</p>
         <button type="button" className="view-work-btn" onClick={handleClick}>
           View Work
