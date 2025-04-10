@@ -44,25 +44,11 @@ const NavBar = () => {
         zIndex: 100,
       }}
     >
-      {/* Nav Links */}
-      <div
-        style={{
-          display: 'flex',
-          gap: '16px',
-        }}
-      >
-        <Link href="/" passHref>
-          <a className={navLinkStyle}>Home</a>
-        </Link>
-        <Link href="/about" passHref>
-          <a className={navLinkStyle}>About</a>
-        </Link>
-        <Link href="/projects" passHref>
-          <a className={navLinkStyle}>Projects</a>
-        </Link>
-        <Link href="/contact" passHref>
-          <a className={navLinkStyle}>Contact</a>
-        </Link>
+      <div style={{ display: 'flex', gap: '16px' }}>
+        <Link href="/" style={navLinkStyle}>Home</Link>
+        <Link href="/about" style={navLinkStyle}>About</Link>
+        <Link href="/projects" style={navLinkStyle}>Projects</Link>
+        <Link href="/contact" style={navLinkStyle}>Contact</Link>
       </div>
     </nav>
   );

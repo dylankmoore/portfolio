@@ -2,7 +2,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
-import Image from 'next/image';
 import { useInView } from 'react-intersection-observer';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { motion, AnimatePresence } from 'framer-motion';
