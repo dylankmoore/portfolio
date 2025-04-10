@@ -1,25 +1,29 @@
-import React from 'react';
-import Link from 'next/link';
+import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Footer from '../components/FooterCard';
 
-const Home = () => (
-  <><br /><br /><br /><br />
-    <Head>
-      <title>Your Name</title>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Space+Mono&display=swap" />
-    </Head>
+const Home = () => {
+  const router = useRouter();
 
-    <div className="home-wrapper">
-      <h1 className="main-name">DYLAN MOORE</h1>
-      <p className="subtitle">Fullstack Software Developer</p>
-      <Link href="/projects">
-        <a href className="view-work-btn">View Work</a>
-      </Link>
-    </div>
+  const handleClick = () => {
+    router.push('/projects');
+  };
 
-    <Footer />
-  </>
-);
+  return (
+    <>
+      <Head>
+        <title>Your Name</title>
+      </Head>
+      <div className="home-wrapper">
+        <h1 className="main-name">DYLAN MOORE</h1>
+        <p className="subtitle">Fullstack Software Developer</p>
+        <button type="button" className="view-work-btn" onClick={handleClick}>
+          View Work
+        </button>
+      </div>
+      <Footer />
+    </>
+  );
+};
 
 export default Home;

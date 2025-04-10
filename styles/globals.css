@@ -42,7 +42,7 @@ a {
 }
 
 a:hover {
-  color: white;
+  color: rgb(165, 178, 252);
 }
 
 * {
@@ -103,7 +103,7 @@ h1, h2, h3 {
   top: 0;
   width: 100%;
   padding: 15px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: transparent;
   display: flex;
   justify-content: space-around;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -116,6 +116,7 @@ h1, h2, h3 {
   font-family: 'Inconsolata', monospace;
   font-size: 1rem;
 }
+
 
 .project-card {
   max-width: 900px;
@@ -166,12 +167,6 @@ h1, h2, h3 {
   animation: fadeInSlide 0.8s ease-out;
 }
 
-.nav-link:hover {
-  color: #4349f1;
-  border-bottom: 2px solid #4349f1;
-  cursor: pointer;
-}
-
 .projects-title {
   text-align: center;
   margin-bottom: 40px;
@@ -187,7 +182,6 @@ h1, h2, h3 {
   justify-content: center;
   margin: 40px 0; 
 }
-
 
 .hero-section {
   padding-bottom: 40px; 
@@ -244,8 +238,8 @@ h1, h2, h3 {
 }
 
 .view-work-btn {
-  background-color: transparent;
-  color: white;
+  background-color: white;
+  color: black;
   border: 2px solid white;
   padding: 10px 20px;
   font-family: 'Space Mono', monospace;
@@ -256,9 +250,9 @@ h1, h2, h3 {
 }
 
 .view-work-btn:hover {
-  background-color: white;
+  background-color: transparent;
   border: 2px solid white;
-  color: black;
+  color: black !important;
 }
 
 .contact-form button {
