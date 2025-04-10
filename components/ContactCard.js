@@ -45,13 +45,13 @@ const ContactSection = () => {
         }}
       >
         <Image
-          src="/contact.png"
+          src="/contact (1).png"
           alt="Contact Header"
           width={200}
           height={55}
           priority
         />
-      </div>
+      </div><br />
 
       <AnimatePresence>
         {showContent && (
@@ -100,7 +100,7 @@ const ContactSection = () => {
               <label htmlFor="message">Message</label>
               <textarea id="message" name="message" rows="5" required />
 
-              <button type="submit">Send Message</button>
+              <button id="submit" type="submit">Send Message</button>
             </form>
           </motion.div>
         )}
