@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import Image from 'next/image';
@@ -43,12 +45,11 @@ const AboutCard = () => {
               }}
             >
               <br />
-              <Image
+              <img
                 src="/aboutme.png"
                 alt="Contact Header"
                 width={220}
                 height={70}
-                priority
               />
               <br /><br /><br />
               <p>

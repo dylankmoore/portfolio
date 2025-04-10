@@ -1,5 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useState, useEffect, useRef } from 'react';
-import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import ProjectCard from '../components/ProjectCard';
 import Footer from '../components/FooterCard';
@@ -30,12 +30,11 @@ const Projects = () => {
       <div ref={sectionRef}>
         <br /><br /><br /><br /><br />
         <div style={{ width: 'fit-content', margin: '0 auto' }}>
-          <Image
+          <img
             src="/projects.png"
             alt="My Projects"
             width={250}
             height={80}
-            priority
           />
         </div>
         <br />
