@@ -1,7 +1,13 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useEffect, useCallback } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
+
+const navLinkStyle = {
+  textDecoration: 'none',
+  color: 'black',
+  fontWeight: 500,
+  fontSize: '16px',
+};
 
 const NavBar = () => {
   const [showNavbar, setShowNavbar] = useState(true);
@@ -9,9 +15,9 @@ const NavBar = () => {
 
   const controlNavbar = useCallback(() => {
     if (window.scrollY < lastScrollY || window.scrollY < 50) {
-      setShowNavbar(true); // show when scrolling up
+      setShowNavbar(true);
     } else {
-      setShowNavbar(false); // hide when scrolling down
+      setShowNavbar(false);
     }
     setLastScrollY(window.scrollY);
   }, [lastScrollY]);
@@ -24,32 +30,40 @@ const NavBar = () => {
   }, [controlNavbar]);
 
   return (
-    <nav className={`navbar ${showNavbar ? 'visible' : 'hidden'}`}>
-      <div className="navbar-logo">
+    <nav
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'flex-end',
+        padding: '20px',
+        position: 'fixed',
+        width: '100%',
+        backgroundColor: 'white',
+        top: showNavbar ? '0' : '-100px',
+        transition: 'top 0.3s',
+        zIndex: 100,
+      }}
+    >
+      {/* Nav Links */}
+      <div
+        style={{
+          display: 'flex',
+          gap: '16px',
+        }}
+      >
         <Link href="/" passHref>
-          <a>
-            <Image
-              src="/dylan moore.png"
-              alt="Dylan Moore Logo"
-              width={150}
-              height={45}
-              priority
-            />
-          </a>
+          <a style={navLinkStyle}>Home</a>
+        </Link>
+        <Link href="/about" passHref>
+          <a style={navLinkStyle}>About</a>
+        </Link>
+        <Link href="/projects" passHref>
+          <a style={navLinkStyle}>Projects</a>
+        </Link>
+        <Link href="/contact" passHref>
+          <a style={navLinkStyle}>Contact</a>
         </Link>
       </div>
-      <Link href="/" passHref>
-        <a className="nav-link">Home</a>
-      </Link>
-      <Link href="/about" passHref>
-        <a className="nav-link">About</a>
-      </Link>
-      <Link href="/projects" passHref>
-        <a className="nav-link">Projects</a>
-      </Link>
-      <Link href="/contact" passHref>
-        <a className="nav-link">Contact</a>
-      </Link>
     </nav>
   );
 };
