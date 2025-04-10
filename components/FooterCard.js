@@ -11,7 +11,7 @@ const Footer = () => (
     }}
   >
     <p style={{ margin: 0 }}>
-      {new Date().getFullYear()} Dylan Moore. All rights reserved.
+      &copy; {new Date().getFullYear()} Dylan Moore. All rights reserved.
     </p>
   </footer>
 );
