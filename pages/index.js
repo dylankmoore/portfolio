@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>Your Name</title>
+        <title>Dylan Moore | Fullstack Developer</title>
       </Head>
       <div className="home-wrapper">
         <img
