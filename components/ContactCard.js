@@ -52,7 +52,7 @@ const ContactSection = () => {
                 width={200}
                 height={55}
               />
-            </div>
+            </div><br /><br />
 
             {/* Social Links */}
             <div className="social-links">

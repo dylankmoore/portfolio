@@ -56,7 +56,7 @@ const AboutCard = () => {
                 width={220}
                 height={70}
               />
-              <br /><br /><br />
+              <br /><br /><br /><br />
 
               <p>
                 My name is Dylan Moore & I'm a full stack software developer based in Nashville, Tennessee. My journey with web design began in the early days of Geocities and Expage, where I taught myself basic HTML and CSS to build fun, personal pages. After many years in the service industry, I craved a new challenge and decided to revisit my early interest in design and development by enrolling at Nashville Software School.

@@ -69,7 +69,7 @@ const Projects = () => {
                 <br />
                 <p>Some key features include:</p>
                 <ul>
-                  <li>Google authorizatoin</li>
+                  <li>Google authorization</li>
                   <li>CRUD on Buildings &amp; Collections</li>
                   <li>Search on the building entries</li>
                   <li>C#/.NET Backend</li>
