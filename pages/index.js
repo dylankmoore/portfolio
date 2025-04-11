@@ -23,6 +23,7 @@ const Home = () => {
           height={100}
         />
         <p className="subtitle">Full Stack Software Developer</p>
+        <p />
         <button type="button" className="view-work-btn" onClick={handleClick}>
           View Work
         </button>
