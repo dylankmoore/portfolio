@@ -1,56 +1,63 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react';
-import { useInView } from 'react-intersection-observer';
-// eslint-disable-next-line import/no-extraneous-dependencies
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const AboutCard = () => {
-  const { ref, inView } = useInView({
-    threshold: 0.4,
-    triggerOnce: false,
-  });
+  const [showContent, setShowContent] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!sectionRef.current) return;
+      const rect = sectionRef.current.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.8) {
+        setShowContent(true);
+      } else {
+        setShowContent(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <>
-      <section
-        ref={ref}
-        className="about-section"
-        style={{
-          position: 'relative',
-          width: '90%',
-          maxWidth: '900px',
-          padding: '30px 20px 0',
-          margin: '0 auto',
-          zIndex: inView ? 2 : 1,
-        }}
-      >
-        {/* Expandable Content Below Logo */}
-        <AnimatePresence mode="wait">
-          {inView && (
-            <motion.div
-              key="expanded"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.6, ease: 'easeOut' }}
-              style={{
-                marginTop: '30px',
-                textAlign: 'center',
-                maxWidth: '700px',
-                marginLeft: 'auto',
-                marginRight: 'auto',
-              }}
+    <section
+      ref={sectionRef}
+      className="about-section"
+      style={{
+        padding: '40px 20px',
+        position: 'relative',
+        textAlign: 'center',
+      }}
+    >
+      <AnimatePresence>
+        {showContent && (
+          <motion.div
+            key="about-section"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+          >
+            <div style={{
+              maxWidth: '700px',
+              margin: '0 auto',
+              textAlign: 'center',
+            }}
             >
-              <br />
               <img
                 src="/aboutme.png"
-                alt="Contact Header"
+                alt="About Header"
                 width={220}
                 height={70}
               />
               <br /><br /><br />
+
               <p>
                 My name is Dylan Moore & I'm a full stack software developer based in Nashville, Tennessee. My journey with web design began in the early days of Geocities and Expage, where I taught myself basic HTML and CSS to build fun, personal pages. After many years in the service industry, I craved a new challenge and decided to revisit my early interest in design and development by enrolling at Nashville Software School.
               </p>
@@ -62,6 +69,7 @@ const AboutCard = () => {
               <p>
                 I'm actively seeking full time work opportunities where I can contribute, grow, and continue learning as a developer. I'm also open to freelance projects and collaborations. If you have an idea you'd like to bring to life — or you're hiring — I'd love to connect!
               </p>
+
               <br /><br /><br />
               <h5>Tech Stack</h5><br />
               <div style={{
@@ -95,13 +103,14 @@ const AboutCard = () => {
                     style={{ width: '35px', height: '40px' }}
                   />
                 ))}
-              </div><br /><br /><br /><br /><br />
+              </div>
 
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </section>
-    </>
+              <br /><br /><br /><br /><br />
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </section>
   );
 };
 
