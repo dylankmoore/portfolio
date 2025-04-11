@@ -29,7 +29,7 @@ const ContactSection = () => {
       ref={sectionRef}
       className="contact-section"
       style={{
-        padding: '40px 20px',
+        padding: '20px 20px',
         position: 'relative',
         zIndex: 2,
         textAlign: 'center',
@@ -45,7 +45,7 @@ const ContactSection = () => {
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
             {/* Header */}
-            <div style={{ marginBottom: '30px' }}>
+            <div style={{ width: 'fit-content', margin: '-10px auto 40px' }}>
               <img
                 src="/contact.png"
                 alt="Contact Header"
