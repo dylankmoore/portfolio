@@ -192,6 +192,32 @@ h1, h2, h3 {
   }
 }
 
+@media (max-width: 768px) {
+  .project-content {
+    flex-direction: column !important; /* override row layout */
+    align-items: center;
+    text-align: left;
+  }
+
+  .project-text {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+
+  .project-images {
+    margin-bottom: 20px;
+  }
+
+  .project-images img {
+    width: 100%;
+    height: auto;
+  }
+
+  .project-card {
+    padding: 20px 0;
+  }
+}
+
 @keyframes fadeInSlide {
   from {
     opacity: 0;

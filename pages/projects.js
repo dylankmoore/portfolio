@@ -132,10 +132,9 @@ const Projects = () => {
             title="Migraine Manager"
             description={(
               <>
-                <p>Migraine Manager is an app built for people who suffer from migraines & want to log their symptoms as a way of gaining better understanding of their triggers.
-
-                  This was my first capstone project at Nashville Software School.
-                </p>
+                <p>Migraine Manager is an app built for people who suffer from migraines & want to log their symptoms as a way of gaining better understanding of their triggers.</p>
+                <br />
+                <p>This was my first capstone project at Nashville Software School.</p>
                 <br />
                 <p>Some key features include:</p>
                 <ul>
@@ -151,8 +150,7 @@ const Projects = () => {
                 </a>&nbsp;&nbsp;&nbsp;
                 <a href="https://migraine-manager.netlify.app/" target="_blank" rel="noopener noreferrer">
                   Visit deployed site
-                </a><br />
-                      &nbsp;&nbsp;&nbsp;
+                </a><br />&nbsp;&nbsp;&nbsp;
                 <a href="https://www.loom.com/share/36c257843ea34b49927d0b0a1308c2b1?sid=ff568340-834a-496f-ab11-6f8568298092" target="_blank" rel="noopener noreferrer">
                   View demo
                 </a>
