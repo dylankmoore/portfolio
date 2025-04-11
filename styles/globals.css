@@ -9,6 +9,7 @@ body, html {
   text-align: center;
   overflow-x: hidden !important;
   width: 100%;
+  position: relative;
 }
 
 .main-name {
@@ -21,13 +22,6 @@ body, html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.main-name {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 5rem;
-  letter-spacing: 2px;
-  margin: 0;
 }
 
 .subtitle {
@@ -43,7 +37,7 @@ a {
 }
 
 a:hover {
-  background: linear-gradient(to right, #8e5e9f, #3a9cd3); /* darker gradient */
+  background: linear-gradient(to right, #8e5e9f, #3a9cd3);
   background-clip: text;
   -webkit-background-clip: text;
   color: white;
@@ -91,42 +85,75 @@ h1, h2, h3 {
 }
 
 .navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 15px;
-  background-color: transparent;
   display: flex;
-  justify-content: space-around;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  background-color: transparent;
+  transition: top 0.3s;
+  z-index: 100;
 }
 
-.navbar a:hover {
-color: white;
+.navbar.visible {
+  top: 0;
+}
+
+.navbar.hidden {
+  top: -100px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 16px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .nav-links {
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .navbar {
+    padding: 10px;
+  }
+
+  .nav-link {
+    padding: 8px 0;
+  }
 }
 
 .project-card {
-  max-width: 900px;
-  margin: 0 auto 20px;
-  display: flex; 
-  padding: 20px;
-  align-items: center;
+  margin-bottom: 60px;
 }
 
 .project-content {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  gap: 20px;
 }
 
-.project-images {
-  margin-right: 45px!important;
+.project-images img {
+  width: 100%;
+  max-width: 390px;
+  height: auto;
+  border-radius: 8px;
 }
 
 .project-text {
-  max-width: 500px; 
-  margin: 0;
+  max-width: 600px;
 }
 
 .project-text h3 {
@@ -138,6 +165,31 @@ color: white;
   font-size: 16px;
   line-height: 1.6;
   margin-bottom: 0; 
+}
+
+.project-images {
+  margin: 0 0 20px 0;
+}
+
+.project-text {
+  max-width: 100%;
+  padding: 0 10px;
+}
+
+.project-card {
+  margin-bottom: 80px;
+}
+
+.project-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80 40px;
+}
+
+@media (max-width: 768px) {
+  .project-section {
+    padding: 60px 20px;
+  }
 }
 
 @keyframes fadeInSlide {

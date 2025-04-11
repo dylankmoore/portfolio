@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 
@@ -23,21 +22,8 @@ const NavBar = () => {
   }, [controlNavbar]);
 
   return (
-    <nav
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'flex-end',
-        padding: '20px',
-        position: 'fixed',
-        width: '100%',
-        backgroundColor: 'transparent',
-        top: showNavbar ? '0' : '-100px',
-        transition: 'top 0.3s',
-        zIndex: 100,
-      }}
-    >
-      <div style={{ display: 'flex', gap: '16px' }}>
+    <nav className={`navbar ${showNavbar ? 'visible' : 'hidden'}`}>
+      <div className="nav-links">
         <Link href="/" className="nav-link">Home</Link>
         <Link href="/about" className="nav-link">About</Link>
         <Link href="/projects" className="nav-link">Projects</Link>
