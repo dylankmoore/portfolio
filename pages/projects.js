@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState, useRef } from 'react';
 import { motion } from 'framer-motion';
+import Head from 'next/head';
 import ProjectCard from '../components/ProjectCard';
 import Footer from '../components/FooterCard';
 
@@ -27,6 +28,9 @@ const Projects = () => {
 
   return (
     <>
+      <Head>
+        <title>Dylan Moore | Full Stack Developer</title>
+      </Head>
       <section ref={sectionRef}>
         {showProjects && (
           <motion.div
@@ -61,11 +65,13 @@ const Projects = () => {
               <>
                 <p>Architecture Archive is a full stack web application that enables history & architecture lovers to view & search through different historical structures, as well as create personalized collections.</p>
                 <br />
-                <p>This was my backend-focused capstone project at Nashville Software School.</p>
+                <p>This was my back end focused capstone project at Nashville Software School.</p>
                 <br />
                 <p>Some key features include:</p>
                 <ul>
+                  <li>Google authorizatoin</li>
                   <li>CRUD on Buildings &amp; Collections</li>
+                  <li>Search on the building entries</li>
                   <li>C#/.NET Backend</li>
                   <li>React/Next.js Frontend</li>
                 </ul>
@@ -96,7 +102,7 @@ const Projects = () => {
             title="Y2Play"
             description={(
               <>
-                <p>Y2Play is a full stack web app for 2000s music lovers. Users can create playlists & view playlists made by other users.</p>
+                <p>Y2Play is a full stack web app for 2000s music lovers. Users can create simulated playlists & view playlists made by other users.</p>
                 <br />
                 <p>This project was a collaborative effort built by a team of five women: Myself, Courtney Fairall, Keana Cobarde, Yarelis Martin, and Britnay Gore.</p>
                 <br />
@@ -132,7 +138,7 @@ const Projects = () => {
             title="Migraine Manager"
             description={(
               <>
-                <p>Migraine Manager is an app built for people who suffer from migraines & want to log their symptoms as a way of gaining better understanding of their triggers.</p>
+                <p>Migraine Manager is a web app built for people who suffer from migraines & want to log their symptoms as a way of gaining better understanding of their triggers.</p>
                 <br />
                 <p>This was my first capstone project at Nashville Software School.</p>
                 <br />

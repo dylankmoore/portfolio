@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>Dylan Moore | Fullstack Developer</title>
+        <title>Dylan Moore | Full Stack Developer</title>
       </Head>
       <div className="home-wrapper">
         <img
@@ -22,7 +22,7 @@ const Home = () => {
           width={300}
           height={100}
         />
-        <p className="subtitle">Fullstack Software Developer</p>
+        <p className="subtitle">Full Stack Software Developer</p>
         <button type="button" className="view-work-btn" onClick={handleClick}>
           View Work
         </button>
