@@ -63,11 +63,11 @@ const AboutCard = () => {
               </p>
 
               <p>
-                I recently graduated with a certificate in Full Stack Web Development, where I gained hands on experience building responsive, user-friendly applications using technologies like C#, .NET, SQL, React, and Next.js. Since then, I've been continuing to sharpen my skills through personal projects.
+                I recently graduated with a certificate in Full Stack Software Development, where I gained hands on experience building responsive, user-friendly applications using technologies like C#, .NET, SQL, React, and Next.js. Since then, I've been continuing to sharpen my skills through personal projects.
               </p>
 
               <p>
-                I'm actively seeking full time work opportunities where I can contribute, grow, and continue learning as a developer. I'm also open to freelance projects and collaborations. If you have an idea you'd like to bring to life — or you're hiring — I'd love to connect!
+                I'm actively seeking full time work opportunities where I can contribute, grow, and continue learning as a developer. I'm also open to freelance projects and collaborations. If you have an idea you'd like to bring to life - or you're hiring - I'd love to connect!
               </p>
 
               <br /><br /><br />
